@@ -1,3 +1,4 @@
 {
-    "mongoURI" : "mongodb+srv://dimas6932:avalon@devconnector.irgrfba.mongodb.net/?retryWrites=true&w=majority"
+    "mongoURI" : "mongodb+srv://dimas6932:avalon@devconnector.irgrfba.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret" : "mysecrettoken"
 }
