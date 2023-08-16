@@ -7,6 +7,10 @@ import Alert from './components/layout/Alert';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Dashboard from './components/dashboard/Dashboard';
+import CreateProfile from './components/profile-forms/CreateProfile';
+import EditProfile from './components/profile-forms/EditProfile';
+import AddExperience from './components/profile-forms/AddExperience';
+import AddEducation from './components/profile-forms/AddEducation';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 import { loadUser } from './actions/auth';
@@ -39,6 +43,10 @@ const App = () => {
               <Route exact path="/login" element={<Login />} />
             </Routes>
             <PrivateRoute exact path="/dashboard" element={<Dashboard />} />
+            <PrivateRoute exact path="/create-profile" element={<CreateProfile />} />
+            <PrivateRoute exact path="/edit-profile" element={<EditProfile />} />
+            <PrivateRoute exact path="/add-experience" element={<AddExperience />} />
+            <PrivateRoute exact path="/add-education" element={<AddEducation />} />
           </section>
         </Fragment>
       </Router>

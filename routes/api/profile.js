@@ -66,7 +66,11 @@ router.post('/', [auth, [
     if (status) profileFields.status = status;
     if (githubusername) profileFields.githubusername = githubusername;
     if (skills) {
-        profileFields.skills = skills.split(',').map(skill => skill.trim())
+        if (typeof skills === 'string') {
+            profileFields.skills = skills.split(',').map(skill => skill.trim());
+        } else if (Array.isArray(skills)) {
+            profileFields.skills = skills.map(skill => skill.trim());
+        }
     }
 
     profileFields.social = {};
