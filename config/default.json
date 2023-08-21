@@ -1,6 +1,6 @@
 {
-    "mongoURI" : "mongodb+srv://dimas6932:avalon@devconnector.irgrfba.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret" : "mysecrettoken",
-    "githubClientId" : "f554a8c142d4f786110c",
-    "githubSecret" : "03b35c7dfedbf651fa682b21b9ee22257a511804"
+    "mongoURI" : "",
+    "jwtSecret" : "",
+    "githubClientId" : "",
+    "githubSecret" : ""
 }

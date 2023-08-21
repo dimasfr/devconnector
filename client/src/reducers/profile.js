@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { 
     GET_PROFILE,
     GET_PROFILES,
@@ -7,7 +8,6 @@ import {
     GET_REPOS
 } from "../actions/types";
 
-/* eslint-disable import/no-anonymous-default-export */
 const initialState = {
     profile: null,
     profiles: [],
@@ -37,7 +37,8 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 error: payload,
-                loading: false
+                loading: false,
+                profile: null
             }
         case CLEAR_PROFILE:
             return {
