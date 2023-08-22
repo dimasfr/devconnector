@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Alert from './components/layout/Alert';
+import NotFound from './components/layout/NotFound';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Dashboard from './components/dashboard/Dashboard';
@@ -14,6 +15,7 @@ import AddEducation from './components/profile-forms/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 import { loadUser } from './actions/auth';
@@ -46,6 +48,7 @@ const App = () => {
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/profiles" element={<Profiles />} />
               <Route exact path="/profile/:id" element={<Profile />} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
             <PrivateRoute exact path="/dashboard" element={<Dashboard />} />
             <PrivateRoute exact path="/create-profile" element={<CreateProfile />} />
@@ -53,6 +56,7 @@ const App = () => {
             <PrivateRoute exact path="/add-experience" element={<AddExperience />} />
             <PrivateRoute exact path="/add-education" element={<AddEducation />} />
             <PrivateRoute exact path="/posts" element={<Posts />} />
+            <PrivateRoute exact path="/posts/:id" element={<Post />} />
           </section>
         </Fragment>
       </Router>
